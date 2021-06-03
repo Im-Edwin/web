@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Mad Hacker";
+  src: local("MAD Hacker"), local("MadHacker-YYqv"), local("MadHacker-Yjz8"),
+    url(./src/assets/fonts/mad_hacker/MadHacker-YYqv.ttf);
+}
+
+@font-face {
+  font-family: "Doctor Glitch";
+  src: local("Doctor Glitch"),
+    url(./src/assets/fonts/doctor_glitch/Doctor_Glitch.otf);
+}
+@font-face {
+  font-family: "Doctor Glitch";
+  src: local("Doctor Glitch"),
+    url(./src/assets/fonts/doctor_glitch/Doctor_Glitch.otf);
+}
+
+@font-face {
+  font-family: "New Kind Of English";
+  src: local("NEW KIND OF ENGLISH"), local("NewKindOfEnglish-246l"),
+    url(./src/assets/fonts/new_kind_of_english/NewKindOfEnglish-246l.ttf);
+}
+
+@font-face{
+  font-family:"helvetica";
+  src:url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+  url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+  url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+
+@keyframes changing-cards {
+  0% {
+    box-shadow: -0.7rem -0.7rem var(--c-primary), 0.7rem 0.7rem var(--c-primary);
+  }
+  50% {
+    box-shadow: 0.7rem -0.7rem var(--c-primary), -0.7rem 0.7rem var(--c-primary);
+  }
+  100% {
+    box-shadow: 0.7rem 0.7rem var(--c-primary), -0.7rem -0.7rem var(--c-primary);
+  }
+}
+
+:root {
+  /* Colors */
+  --c-primary: hsl(0, 0%, 8%);
+  --c-secondary: hsl(0, 0%, 100%);
+  --c-tertiary: hsl(0, 0%, 100%);
+  /* Font-Size */
+  --f-14: 1.4rem;
+  --f-16: 1.6rem;
+  --f-18: 1.8rem;
+  --f-24: 2.4rem;
+  --f-36: 3.6rem;
+  --f-72: 7.2rem;
+}
+
+::selection {
+  background-color: var(--c-primary);
+  color: var(--c-tertiary);
+  text-shadow: var(--c-primary) 0.1rem 0.1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--c-secondary);
+  color: var(--c-primary);
+  font-family: "helvetica";
+  font-size: var(--f-30);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+h1 {
+  font-size: var(--f-36);
+  font-family: "Doctor Glitch";
+  letter-spacing: 0.2em;
+}
+
+.graphic {
+  position: absolute;
+  right: 0;
+  top: 0rem;
+  mix-blend-mode: color #fff;
+  z-index: -1;
+}
+
+.hero-container {
+  min-height: 60.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5.0rem 0 6.0rem;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  border-radius: 12.5rem 0;
+  box-shadow: 0 0.4rem 5.0rem hsla(0, 0%, 0%, 0.25);
+}
+
+.error-msg {
+  max-width: min-content;
+}
+
+.hacked-msg {
+  position: absolute;
+  top: 30.0rem;
+}
+
+.hacked-word {
+  font-family: "New Kind Of English";
+}
+
+.link-button {
+  color: inherit;
+  background-color: var(--c-tertiary);
+  font-size: var(--f-14);
+  line-height: 2.4rem;
+  box-shadow: -0.5rem -0.5rem var(--c-primary), 0.5rem 0.5rem var(--c-primary);
+  padding: 1.8rem 2.4rem;
+  transition: 0.5s ease-in-out;
+}
+
+.link-button:hover {
+  cursor: ;
+  animation: changing-cards 2s infinite;
+  transition: 1s ease-in-out;
+  color: var(--c-tertiary);
+  background-color: var(--c-primary);
+}
+
+.link-button:active {
+  cursor: wait;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: var(--f-24);
+  }
+
+  main {
+    padding: 7.0rem 2.4rem;
+  }
+
+  h1 {
+    font-size: var(--f-72);
+  }
+
+  .hero-container {
+    min-height: 90.5rem;
+    border-radius: 15.5rem 0;
+  }
+
+  .hacked-msg {
+    top: 53.5rem;
+  }
+
+  .link-button {
+    font-size: var(--f-18);
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  main {
+    padding: 17.2rem 14.4rem;
+  }
+
+  h1 {
+    white-space: var(--c-primary);
+  }
+
+  .graphic {
+    left: auto;
+    right: center;
+    bottom: auto;
+  }
+
+
+
+
+  .link-button {
+    position: absolute;
+    top: 70.0rem;
+  }
+
+/* footer section styling */
+footer{
+    background: rgb(88, 118, 216);
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+}
